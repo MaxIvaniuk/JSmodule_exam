@@ -1,0 +1,26 @@
+<svg width="0" height="0" class="hidden">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 12" id="tw"><text x="-.214" y="11.828" font-size="16" fill="#fff" font-family="FontAwesome"></text></symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 16" id="fb"><text x="-.214" y="13.828" font-size="16" fill="#fff" font-family="FontAwesome"></text></symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 15" id="inst"><text x="-.214" y="12.828" font-size="16" fill="#fff" font-family="FontAwesome"></text></symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 5" id="scroll"><text x="-1.123" y="7.085" font-size="14" fill="#fff" font-family="FontAwesome"></text></symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 438.533 438.533" id="inbox">
+    <path d="M431.398 210.987L363.444 53.388c-1.903-4.762-5.373-8.757-10.421-11.991-5.041-3.239-10.037-4.854-14.985-4.854H100.499c-4.949 0-9.945 1.615-14.987 4.854-5.042 3.234-8.52 7.229-10.422 11.991L7.137 210.987C2.378 222.598 0 234.302 0 246.102V383.72c0 4.949 1.807 9.23 5.424 12.848 3.619 3.613 7.902 5.424 12.851 5.424h401.991c4.948 0 9.229-1.811 12.847-5.424 3.614-3.617 5.421-7.898 5.421-12.848V246.102c-.001-11.8-2.373-23.504-7.136-35.115zm-139.327 26.552l-27.113 54.819h-91.367l-27.123-54.819H56.247c.193-.38.428-1.14.715-2.282.287-1.14.525-1.903.715-2.283l60.526-141.607h202.138l60.521 141.607c.194.575.431 1.335.711 2.283.288.947.524 1.707.719 2.282h-90.221z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 20" id="geo">
+    <title>location_on</title>
+    <g fill="none" fill-rule="evenodd">
+      <path d="M-5-2h24v24H-5z"></path>
+      <path d="M7 0C3.13 0 0 3.13 0 7c0 4.17 4.42 9.92 6.24 12.11.4.48 1.13.48 1.53 0C9.58 16.92 14 11.17 14 7c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z" fill="#1D1D1D"></path>
+    </g>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" id="phone">
+    <title>phone</title>
+    <g fill="none" fill-rule="evenodd">
+      <path d="M-3-3h24v24H-3z"></path>
+      <path d="M16.23 12.26l-2.54-.29a1.99 1.99 0 00-1.64.57l-1.84 1.84a15.045 15.045 0 01-6.59-6.59l1.85-1.85c.43-.43.64-1.03.57-1.64l-.29-2.52A2.001 2.001 0 003.76.01H2.03C.9.01-.04.95.03 2.08c.53 8.54 7.36 15.36 15.89 15.89 1.13.07 2.07-.87 2.07-2v-1.73c.01-1.01-.75-1.86-1.76-1.98z" fill="#1D1D1D"></path>
+    </g>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="clock">
+    <path d="M15 11h-2V7a1 1 0 00-2 0v5a1 1 0 001 1h3a1 1 0 000-2zm-3-9a10 10 0 1010 10A10 10 0 0012 2zm0 18a8 8 0 118-8 8 8 0 01-8 8z"></path>
+  </symbol>
+</svg>

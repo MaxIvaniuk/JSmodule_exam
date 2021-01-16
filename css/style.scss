@@ -1,0 +1,145 @@
+@mixin buttonStyle {
+    text-transform: uppercase;
+    color: #000;
+    border: 1px solid #fff;
+}
+
+@mixin GothamBook {
+    font-family: 'Gotham', sans-serif;
+    font-weight: normal;
+}
+
+@mixin GothamMedium {
+    font-family: 'Gotham', sans-serif;
+    font-weight: 500;
+}
+
+@mixin GothamBold {
+    font-family: 'Gotham', sans-serif;
+    font-weight: bold;
+}
+
+* {
+    transition: all 0.1s;
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    width: 80%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.container {
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    background-image: url(../../img/header_bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    padding-top: 50px;
+    height: 100vh;
+
+        &::before{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background: linear-gradient(90deg, rgba(136,200,250,1) 0%, rgba(82,33,255,0.5) 100%);
+        }
+
+        &__top_bar {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+        }
+
+        &__nav {
+        
+            .nav_list{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                &__item{
+                    list-style: none;
+                    margin-left: 100px;
+
+                    &_link{
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        color: #fff;
+                        @include GothamBook;
+                    }
+                }
+            }
+        }
+
+        &__socials{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            &_item {
+                margin-left: 20px;
+
+                &_link {
+                    height: 0;
+                    width: 0;
+                }
+
+                &_icon {
+                    width: 40px;
+                    height: 40px;
+                    border: 1px solid #fff;
+                    border-radius: 50%;
+                    padding: 10px;
+                }
+            }
+        }
+
+        &__scroll{
+            width: 40px;
+            height: 40px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+
+            &_icon {
+                font-size: 5px;
+                fill: black;
+            }
+        }
+
+        &__content{
+            z-index: 999;
+        }
+
+        .slider__wrapper{
+            width: 100%;
+            height: 500px;
+            z-index: 999;
+
+            .slider {
+                height: 100%;
+                width: 100%;
+                
+            }
+        }
+
+}
