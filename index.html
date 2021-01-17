@@ -3,105 +3,202 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width">
-		<!-- <link rel="stylesheet" href="./css/style.css">  -->
+
 		<link rel="stylesheet" href="./css/dist/style.css">
 		<link rel="stylesheet" href="./css/reset.css">
 		<link rel="stylesheet" href="./fonts/stylesheet.css">
 		<link rel="stylesheet" href="./css/slick.css">
+		<link rel="stylesheet" href="./css/slick-theme.css">
+		<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" /> -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+		<script src="https://kit.fontawesome.com/897451f4d4.js" crossorigin="anonymous"></script>
 		
 		<title>Monticello</title>
 	</head>
 
 	<body>
 		<header class="header">
+			<div class="header__wrapper">
+				<div class="header__logo">
+					<a href="#">
+						<img src="./img/main_logo.png" alt="logo">
+					</a>
+				</div>
+				<div class="header__nav">
+					<ul class="header__nav_list nav_list">
+						<li class="nav_list__item">
+							<a href="" class="nav_list__item_link">About us</a>
+						</li>
+						<li class="nav_list__item">
+							<a href="#gallery" class="nav_list__item_link">Projects</a>
+						</li>
+						<li class="nav_list__item">
+							<a href="" class="nav_list__item_link">News</a>
+						</li>
+						<li class="nav_list__item">
+							<a href="#contact" class="nav_list__item_link">Contact</a>
+						</li>
+					</ul>
+				</div>
+				<div class="header__socials">
+					<div class="header__socials_item">
+						<a href="#" class="header__socials_item_link">
+							<i class="fab fa-facebook-f socials__icon"></i>
+						</a>
+					</div>
+					<div class="header__socials_item">
+						<a href="#">
+							<i class="fab fa-twitter socials__icon"></i>
+						</a>
+					</div>
+					<div class="header__socials_item">
+						<a href="#">
+							<i class="fab fa-instagram socials__icon"></i>
+						</a>
+					</div>
+				</div>
+			</div> 
+		</header>
+		<main class="main" >
+			<section class="banner">
+				<div class="container wrapper">
+					<div class="banner__content">
+						<div class="banner__slider">
+							<div class="slider__item filter">
+								<div class="slider__item_content">
+									<h1 class="slider__item_header">Simple & modern</h1>
+									<p class="slider__item_text">We make the world's beautiful every day</p>
+								</div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__item_content">
+									<h1 class="slider__item_header">Simple & modern</h1>
+									<p class="slider__item_text">We make the world's beautiful every day</p>
+								</div>
+							</div>
+							<div class="slider__item filter">
+								<div class="slider__item_content">
+									<h1 class="slider__item_header">Simple & modern</h1>
+									<p class="slider__item_text">We make the world's beautiful every day</p>
+								</div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__item_content">
+									<h1 class="slider__item_header">Simple & modern</h1>
+									<p class="slider__item_text">We make the world's beautiful every day</p>
+								</div>
+							</div>
+							<div class="slider__item">
+								<div class="slider__item_content">
+									<h1 class="slider__item_header">Simple & modern</h1>
+									<p class="slider__item_text">We make the world's beautiful every day</p>
+								</div>
+							</div>
+						</div>					
+						<div class="banner__scroll">
+							<a href="#gallery" class="banner__scroll_link">
+								<i class="fas fa-chevron-down banner__scroll_icon"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="gallery" id="gallery">
+				<div class="container wrapper">
+					<div class="gallery__header">
+						<h2 class="header__heading">Gallery</h2>
+					</div>
+					<div class="gallery__image">
+						<div class="gallery__image_big">
+							<img class="gallery__item" src="./img/gallery_main_img.png"></img>
+							<!-- <svg class="gallery__item_icon">
+								<use xlink:href="./sprite.svg#360"></use>
+							</svg> -->
+						</div>
+						<div class="gallery__image_small">
+							<img class="gallery__item" src="./img/gallery_img1.png"></img>
+							<img class="gallery__item" src="./img/gallery_img2.png"></img>
+							<img class="gallery__item" src="./img/gallery_img3.png"></img>
+							<img class="gallery__item" src="./img/gallery_img4.png"></img>
+						</div>
+					</div>
+					<div class="gallery__button">
+						<button class="gallery__button_item">See more</button>
+					</div>
+				</div>
+			</section>
+			<section class="contact">
+				<div id="map"></div>
+				<div class="wrapper container">
+					<div class="contact__content">	
+						<h3 class="content__header">Get in touch</h3>
+						<div class="contact__form" id="contact">				
+							<div class="contact__form_contacts">
+								<div class="contacts__item">
+									<i class="fas fa-map-marker-alt contacts__item_icon"></i>
+									<a href="#" class="contacts__item_link">91 Nolan Extensions Suite 670</a>
+								</div>
+								<div class="contacts__item">
+									<i class="fas fa-phone-alt contacts__item_icon"></i>
+									<a href="tel:+001 356-868-2454" class="contacts__item_link">+001 356-868-2454</a>
+								</div>
+								<div class="contacts__item">
+									<i class="fas fa-inbox contacts__item_icon"></i>
+									<a href="mailto:gahuy93@gmail.com" class="contacts__item_link" target="_blank">gahuy93@gmail.com</a>
+								</div>
+								<div class="contacts__item">
+									<i class="far fa-clock contacts__item_icon"></i>
+									<span class="contacts__item_text">From 07:05AM to 19:30PM</span>
+								</div>
+							</div>
+							<div class="form__wrapper">
+								<form action="" class="form__body">
+									<input class="form__body_item" type="text" name="contact" id="userName" required placeholder="Your name">
+									<input class="form__body_item" type="email" name="contact" id="userEmail" required placeholder="Email">
+									<button type="submit" class="form__button">Submit</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
 			<div class="container wrapper">
-				<div class="header__top_bar">
-					<div class="header__logo">
+				<div class="footer__content">
+					<div class="footer__logo">
 						<a href="#">
 							<img src="./img/main_logo.png" alt="logo">
 						</a>
 					</div>
-					<div class="header__nav">
-						<ul class="header__nav_list nav_list">
-							<li class="nav_list__item">
-								<a href="" class="nav_list__item_link">About us</a>
-							</li>
-							<li class="nav_list__item">
-								<a href="" class="nav_list__item_link">Projects</a>
-							</li>
-							<li class="nav_list__item">
-								<a href="" class="nav_list__item_link">News</a>
-							</li>
-							<li class="nav_list__item">
-								<a href="" class="nav_list__item_link">Contact</a>
-							</li>
-						</ul>
-					</div>
-					<div class="header__socials">
-						<div class="header__socials_item">
-							<a href="#" class="header__socials_item_link">
-								<svg class="header__socials_item_icon">
-									<use xlink:href="./sprite.svg#fb"></use>
-								</svg>
+					<div class="footer__socials">
+						<div class="footer__socials_item">
+							<a href="#" class="socials_item__link">
+								<i class="fab fa-facebook-f socials__icon"></i>
 							</a>
 						</div>
-						<div class="header__socials_item">
-							<a href="#">
-								<svg class="header__socials_item_icon">
-									<use xlink:href="./sprite.svg#tw"></use>
-								</svg>
+						<div class="footer__socials_item">
+							<a href="#" class="socials_item__link">
+								<i class="fab fa-twitter socials__icon"></i>
 							</a>
 						</div>
-						<div class="header__socials_item">
-							<a href="#">
-								<svg class="header__socials_item_icon">
-									<use xlink:href="./sprite.svg#inst"></use>
-								</svg>
+						<div class="footer__socials_item">
+							<a href="#" class="socials_item__link">
+								<i class="fab fa-instagram socials__icon"></i>
 							</a>
 						</div>
 					</div>
 				</div>
-				<div class="header__content">
-					<div class="slider__wrapper">
-						<div class="slider">
-							<div class="slider__item filter">
-								<div class="slider__item_content">
-									<h1 class="slider__item_content_header">Simple&modern</h1>
-									<p class="slider__item_content_text">We make the world's beautiful every day</p>
-								</div>
-							</div>
-							<div class="slider__item">
-								<div class="slider__item_content">
-									<h1 class="slider__item_content_header">Simple&modern</h1>
-									<p class="slider__item_content_text">We make the world's beautiful every day</p>
-								</div>
-							</div>
-							<div class="slider__item filter">
-								<div class="slider__item_content">
-									<h1 class="slider__item_content_header">Simple&modern</h1>
-									<p class="slider__item_content_text">We make the world's beautiful every day</p>
-								</div>
-							</div>
-							<div class="slider__item">
-								<div class="slider__item_content">
-									<h1 class="slider__item_content_header">Simple&modern</h1>
-									<p class="slider__item_content_text">We make the world's beautiful every day</p>
-								</div>
-							</div>
-						</div>
-					</div>					
-					<div class="header__scroll">
-						<a href="#">
-							<svg class="header__scroll_icon">
-								<use xlink:href="./sprite.svg#scroll"></use>
-							</svg>
-						</a>
-					</div>
+				<div class="footer__copyright">
+					<p class="footer__copyright_text">Copyrights <span>&copy;</span> 2017 Monticello Group</p>
+					<p class="footer__copyright_author">Made with <span><i class="fas fa-heart"></i></span> by Ga Huy</p>
 				</div>
 			</div>
-		</header>
+		</footer>
 
-			
+		
+		<!-- <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script> -->
+		<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlU0wtxYqNXdJ_OSvcn87hGjRp8khfAJc&callback=initMap"></script>
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 		<script src="js/slick.min.js"></script>
 		<script src="js/script.js"></script>
