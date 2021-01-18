@@ -363,13 +363,17 @@ body{
 
         &_small{
             display: grid;
-            grid-template-columns: 50% 50%;
+            grid-template-columns: 1fr 1fr;
             gap: 10px 10px;
             width: 100%;
+            font-size: 0;
+            line-height: 0;
 
             .gallery__item {
                 object-fit: cover;
                 width: 100%;
+                font-size: 0;
+                line-height: 0;
 
                 &:hover{
                     transform: scale(1.05);
@@ -619,19 +623,20 @@ body{
                             top: 0;
                             transform: rotate(-45deg);
                             background: #fff;
-                            transition: 0.4s;
+                            transition: 0.2s;
                         }
 
                         &:before {
                             top: 0;
                             transform: rotate(45deg);
                             background: #fff;
-                            transition: 0.4s;
+                            transition: 0.2s;
                 
                         }
 
                         > span {
-                            visibility: hidden;               
+                            visibility: hidden;
+                            transition: 0ms;               
                         }
                     }
         
@@ -641,15 +646,21 @@ body{
                         right: -100%;
                         top: 70px;
                         transition: 0.5s;
+                        width: 100vw;
                     }
                 
                     &:checked ~ .nav_list > .nav_list_item {
                         // margin-right: 50px;
                         padding-right: 50px;
                         transition: 0.5s;
+                        width: 100%;
 
                         &::before{
                             right: 10px;
+                        }
+
+                        .nav_list__item_link{
+                            width: 100%;
                         }
                     }
                 }
@@ -762,6 +773,7 @@ body{
     .wrapper {
         width: 95%;
     }
+
     .banner{
         &__slider{
             justify-content: center;
@@ -769,8 +781,8 @@ body{
                 flex-direction: row;
                 bottom: -40px;
                 right: 65%;
+
                 li{
-                    
                     margin-left: 20px;
                 }
                 
@@ -779,9 +791,33 @@ body{
         }
     }
 
+    .contact{
+        background-color: #fff;
+
+        &__content{
+            position: relative;
+            padding: 90px 10px 50px;
+            text-align: center;
+
+            .contact__form{
+                text-align: left;
+                flex-direction: column;
+
+                .form__wrapper{
+                    .form__body{
+                        .form__button{
+                            margin-left: 0;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .footer {
         &__content{
-            margin-top: 300px;
+            margin-top: 200px;
             width: 80%
         }
 
@@ -848,7 +884,7 @@ body{
             margin-bottom: 60px;
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 50% 50%;
+            grid-template-rows: 1fr 1fr;
             gap: 10px 0px;
 
             // &_small{
@@ -863,8 +899,10 @@ body{
         &__content{
             position: relative;
             padding: 90px 10px 50px;
+            text-align: center;
 
             .contact__form{
+                text-align: left;
                 flex-direction: column;
 
                 .form__wrapper{
