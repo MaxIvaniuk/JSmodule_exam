@@ -22,20 +22,19 @@ $(document).ready(function () {
   });
 });
 var map;
+var pos = {
+  lat: 48.92247040846234,
+  lng: 24.71018961710184
+};
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
-    center: {
-      lat: -34.397,
-      lng: 150.644
-    },
-    zoom: 10
+    center: pos,
+    zoom: 15
   });
   var marker = new google.maps.Marker({
-    position: {
-      lat: -34.397,
-      lng: 150.644
-    },
-    map: map
+    position: pos,
+    map: map,
+    icon: '../../img/Pin.svg'
   });
 }

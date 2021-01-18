@@ -42,6 +42,74 @@ body {
   justify-content: space-between;
   width: 100%;
 }
+.header__nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__nav .toggle_input {
+  visibility: hidden;
+  position: absolute;
+}
+.header__nav .toggle_input:checked ~ .toggle_label:after {
+  top: 0;
+  transform: rotate(-45deg);
+  background: #fff;
+  transition: 0.4s;
+}
+.header__nav .toggle_input:checked ~ .toggle_label:before {
+  top: 0;
+  transform: rotate(45deg);
+  background: #fff;
+  transition: 0.4s;
+}
+.header__nav .toggle_input:checked ~ .toggle_label > span {
+  visibility: hidden;
+}
+.header__nav .toggle_input:checked ~ .nav_list {
+  display: block;
+  visibility: visible;
+  right: -100px;
+  top: 70px;
+  transition: 0.5s;
+}
+.header__nav .toggle_input:checked ~ .nav_list > .nav_list__item {
+  margin-right: 50px;
+  transition: 0.5s;
+}
+.header__nav .toggle_label {
+  display: none;
+}
+.header__nav .toggle_label:hover {
+  transform: scale(1.1);
+}
+.header__nav .toggle_label span {
+  position: absolute;
+  top: 0px;
+  display: block;
+  width: 42px;
+  height: 2px;
+  background-color: #fff;
+  transform-origin: 4px 0px;
+}
+.header__nav .toggle_label::before, .header__nav .toggle_label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 42px;
+  height: 2px;
+  background-color: #fff;
+  top: -10px;
+  transform-origin: 50% 50%;
+}
+.header__nav .toggle_label::after {
+  top: 10px;
+  transform-origin: 50% 50%;
+}
+.header__nav .toggle_input {
+  display: none;
+}
 .header__nav .nav_list {
   display: flex;
   flex-direction: row;
@@ -123,7 +191,8 @@ body {
   position: relative;
 }
 .banner__slider .slick-dots {
-  left: 110%;
+  margin-left: 110%;
+  width: 0;
   display: flex;
   flex-direction: column;
 }
@@ -354,7 +423,7 @@ body {
   font-size: 14px;
   padding: 20px 0;
   margin-top: 10px;
-  float: right;
+  margin-left: 170px;
   width: 140px;
 }
 .contact__content .contact__form .form__wrapper .form__button:hover {
