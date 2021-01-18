@@ -62,8 +62,8 @@ body {
 }
 .header__nav .nav_list__item {
   list-style: none;
-  margin-left: 70px;
-  padding-left: 30px;
+  margin-left: 60px;
+  padding-left: 20px;
   position: relative;
 }
 .header__nav .nav_list__item::before {
