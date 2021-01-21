@@ -38,3 +38,25 @@ function initMap() {
     icon: '../../img/Pin.svg'
   });
 }
+
+$(document).ready(function () {
+  $(".fancybox").fancybox({
+    openEffect: 'elastic',
+    closeEffect: 'elastic',
+    helpers: {
+      title: {
+        type: 'inside'
+      }
+    }
+  });
+}); // Form validation
+
+function validate(form_id, email) {
+  var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+  var address = document.forms[form_id].elements[email].value;
+
+  if (reg.test(address) == false) {
+    alert('Please enter correct email');
+    return false;
+  }
+}

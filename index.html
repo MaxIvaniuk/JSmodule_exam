@@ -120,16 +120,21 @@
 					</div>
 					<div class="gallery__image">
 						<div class="gallery__image_big">
-							<img class="gallery__item" src="./img/gallery_main_img.png" alt="image"></img>
+							<!-- <img class="gallery__item" src="./img/gallery_main_img.png" alt="image"></img> -->
+							<a class="fancybox gallery__item" rel="group" href="./img/gallery_main_img.png"><img src="./img/gallery_main_img.png" alt="" /></a>
 							<!-- <svg class="gallery__item_icon">
 								<use xlink:href="./sprite.svg#360"></use>
 							</svg> -->
 						</div>
 						<div class="gallery__image_small">
-							<img class="gallery__item" src="./img/gallery_img1.png" alt="image"></img>
-							<img class="gallery__item" src="./img/gallery_img2.png" alt="image"></img>
-							<img class="gallery__item" src="./img/gallery_img3.png" alt="image"></img>
-							<img class="gallery__item" src="./img/gallery_img4.png" alt="image"></img>
+							<a class="fancybox gallery__item" rel="group" href="./img/gallery_img1.png"><img src="./img/gallery_img1.png" alt="" /></a>
+							<a class="fancybox gallery__item" rel="group" href="./img/gallery_img2.png"><img src="./img/gallery_img2.png" alt="" /></a>
+							<a class="fancybox gallery__item" rel="group" href="./img/gallery_img3.png"><img src="./img/gallery_img3.png" alt="" /></a>
+							<a class="fancybox gallery__item" rel="group" href="./img/gallery_img4.png"><img src="./img/gallery_img4.png" alt="" /></a>
+							<!-- <img class="gallery__item" src="./img/gallery_img1.png" alt="image"></img>
+							<img class="gallery__item" src="./img/gallery_img2.png" alt="image"></img> -->
+							<!-- <img class="gallery__item" src="./img/gallery_img3.png" alt="image"></img>
+							<img class="gallery__item" src="./img/gallery_img4.png" alt="image"></img> -->
 						</div>
 					</div>
 					<div class="gallery__button">
@@ -162,9 +167,9 @@
 								</div>
 							</div>
 							<div class="form__wrapper">
-								<form action="" class="form__body">
-									<input class="form__body_item" type="text" name="contact" id="userName" required placeholder="Your name">
-									<input class="form__body_item" type="email" name="contact" id="userEmail" required placeholder="Email">
+								<form action="" class="form__body" id="form_id" method="post" action="" onsubmit="javascript:return validate('form_id','email');">
+									<input class="form__body_item" type="text" name="contact" id="name"  placeholder="Your name">
+									<input class="form__body_item" type="email" name="contact" id="email" placeholder="Email">
 									<button type="submit" class="form__button">Submit</button>
 								</form>
 							</div>
@@ -205,14 +210,14 @@
 				</div>
 			</div>
 		</footer>
-
 		
-		<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+		
 		<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlU0wtxYqNXdJ_OSvcn87hGjRp8khfAJc&callback=initMap"></script>
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 		<script src="js/slick.min.js"></script>
 		<script src="js/script.js"></script>
-	</body>
+	</body>                 
 </html>
 
 
