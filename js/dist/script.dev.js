@@ -22,20 +22,62 @@ $(document).ready(function () {
   });
 });
 var map;
+var pos = {
+  lat: 48.92247040846234,
+  lng: 24.71018961710184
+};
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
-    center: {
-      lat: -34.397,
-      lng: 150.644
-    },
-    zoom: 10
+    center: pos,
+    zoom: 15
   });
   var marker = new google.maps.Marker({
-    position: {
-      lat: -34.397,
-      lng: 150.644
-    },
-    map: map
+    position: pos,
+    map: map,
+    icon: '../../img/Pin.svg'
   });
 }
+
+$(document).ready(function () {
+  $(".fancybox").fancybox({
+    openEffect: 'elastic',
+    closeEffect: 'elastic',
+    helpers: {
+      title: {
+        type: 'inside'
+      }
+    }
+  });
+}); // Form validation
+
+function validate(form_id, email) {
+  var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+  var address = document.forms[form_id].elements[email].value;
+
+  if (reg.test(address) == false) {
+    alert('Please enter correct email');
+    return false;
+  }
+} // Preloader
+
+
+var hellopreloader = document.getElementById("hellopreloader_preload");
+
+function fadeOutnojquery(el) {
+  el.style.opacity = 1;
+  var interhellopreloader = setInterval(function () {
+    el.style.opacity = el.style.opacity - 0.05;
+
+    if (el.style.opacity <= 0.05) {
+      clearInterval(interhellopreloader);
+      hellopreloader.style.display = "none";
+    }
+  }, 16);
+}
+
+window.onload = function () {
+  setTimeout(function () {
+    fadeOutnojquery(hellopreloader);
+  }, 500);
+};

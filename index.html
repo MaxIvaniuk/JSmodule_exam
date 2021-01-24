@@ -4,18 +4,22 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width">
 
+		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+		<link rel="manifest" href="./img/favicon/site.webmanifest">
 		<link rel="stylesheet" href="./css/dist/style.css">
 		<link rel="stylesheet" href="./css/reset.css">
 		<link rel="stylesheet" href="./fonts/stylesheet.css">
 		<link rel="stylesheet" href="./css/slick.css">
 		<link rel="stylesheet" href="./css/slick-theme.css">
-		<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" /> -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+		
 		<script src="https://kit.fontawesome.com/897451f4d4.js" crossorigin="anonymous"></script>
 		
 		<title>Monticello</title>
 	</head>
-
 	<body>
 		<header class="header">
 			<div class="header__wrapper">
@@ -24,7 +28,12 @@
 						<img src="./img/main_logo.png" alt="logo">
 					</a>
 				</div>
-				<div class="header__nav">
+				<nav class="header__nav">
+					<input class="toggle_input" type="checkbox" name="burger" id="burger">
+                    <label class="toggle_label" for="burger">
+                        <span></span>
+					</label> 
+					
 					<ul class="header__nav_list nav_list">
 						<li class="nav_list__item">
 							<a href="" class="nav_list__item_link">About us</a>
@@ -39,7 +48,7 @@
 							<a href="#contact" class="nav_list__item_link">Contact</a>
 						</li>
 					</ul>
-				</div>
+				</nav>
 				<div class="header__socials">
 					<div class="header__socials_item">
 						<a href="#" class="header__socials_item_link">
@@ -59,7 +68,11 @@
 				</div>
 			</div> 
 		</header>
+		
 		<main class="main" >
+			<div id="hellopreloader">
+				<div id="hellopreloader_preload"></div>
+			</div>
 			<section class="banner">
 				<div class="container wrapper">
 					<div class="banner__content">
@@ -110,16 +123,21 @@
 					</div>
 					<div class="gallery__image">
 						<div class="gallery__image_big">
-							<img class="gallery__item" src="./img/gallery_main_img.png"></img>
+							<!-- <img class="gallery__item" src="./img/gallery_main_img.png" alt="image"></img> -->
+							<a class="fancybox gallery__item" rel="group" href="./img/gallery_main_img.png"><img src="./img/gallery_main_img.png" alt="" /></a>
 							<!-- <svg class="gallery__item_icon">
 								<use xlink:href="./sprite.svg#360"></use>
 							</svg> -->
 						</div>
 						<div class="gallery__image_small">
-							<img class="gallery__item" src="./img/gallery_img1.png"></img>
-							<img class="gallery__item" src="./img/gallery_img2.png"></img>
-							<img class="gallery__item" src="./img/gallery_img3.png"></img>
-							<img class="gallery__item" src="./img/gallery_img4.png"></img>
+							<a class="fancybox gallery__item" rel="group" href="./img/gallery_img1.png"><img src="./img/gallery_img1.png" alt="" /></a>
+							<a class="fancybox gallery__item" rel="group" href="./img/gallery_img2.png"><img src="./img/gallery_img2.png" alt="" /></a>
+							<a class="fancybox gallery__item" rel="group" href="./img/gallery_img3.png"><img src="./img/gallery_img3.png" alt="" /></a>
+							<a class="fancybox gallery__item" rel="group" href="./img/gallery_img4.png"><img src="./img/gallery_img4.png" alt="" /></a>
+							<!-- <img class="gallery__item" src="./img/gallery_img1.png" alt="image"></img>
+							<img class="gallery__item" src="./img/gallery_img2.png" alt="image"></img> -->
+							<!-- <img class="gallery__item" src="./img/gallery_img3.png" alt="image"></img>
+							<img class="gallery__item" src="./img/gallery_img4.png" alt="image"></img> -->
 						</div>
 					</div>
 					<div class="gallery__button">
@@ -152,9 +170,9 @@
 								</div>
 							</div>
 							<div class="form__wrapper">
-								<form action="" class="form__body">
-									<input class="form__body_item" type="text" name="contact" id="userName" required placeholder="Your name">
-									<input class="form__body_item" type="email" name="contact" id="userEmail" required placeholder="Email">
+								<form action="" class="form__body" id="form_id" method="post" action="" onsubmit="javascript:return validate('form_id','email');">
+									<input class="form__body_item" type="text" name="contact" id="name"  placeholder="Your name">
+									<input class="form__body_item" type="email" name="contact" id="email" placeholder="Email">
 									<button type="submit" class="form__button">Submit</button>
 								</form>
 							</div>
@@ -195,14 +213,12 @@
 				</div>
 			</div>
 		</footer>
-
-		
-		<!-- <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script> -->
 		<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlU0wtxYqNXdJ_OSvcn87hGjRp8khfAJc&callback=initMap"></script>
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 		<script src="js/slick.min.js"></script>
 		<script src="js/script.js"></script>
-	</body>
+	</body>                 
 </html>
 
 
